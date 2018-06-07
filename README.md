@@ -28,7 +28,7 @@ https://bambubeta.herokuapp.com/users
 }
 
 
-https://bambubeta.herokuapp.com/answers
+https://bambubeta.herokuapp.com/questions
 /get
 
 /post

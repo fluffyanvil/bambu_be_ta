@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const database = require('./libs/database')()
 
 app.use(bodyParser.json())
+require('./routes')(app)
 database.connect(config.mongo)
 
 const server = app.listen(config.port, () => {

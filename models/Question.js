@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const optionModelName = require('./Option').modelName
 
 const questionSchema = new mongoose.Schema({
     text: {
@@ -6,16 +7,13 @@ const questionSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
-    answers: [{
-        value: {
-            type: String,
-            required: true,
-            unique: true
-        },
-        score: {
-            type: Number,
-            required: true,
-            unique: true
-        }
-    }]
+    options: {
+        type: [mongoose.Schema.Types.ObjectId],
+        required: true,
+        ref: optionModelName
+    }
 })
+
+const Question = mongoose.model('Question', questionSchema)
+
+module.exports = Question

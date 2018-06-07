@@ -41,6 +41,7 @@ https://bambubeta.herokuapp.com/answers
 
 https://bambubeta.herokuapp.com/options
 /get
+
 /post
 {
 	"value": 10000,
